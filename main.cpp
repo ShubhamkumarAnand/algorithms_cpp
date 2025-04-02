@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+#include "algorithms/searching/binary_search.h"
 #include "algorithms/sorting/quick_sort.h"
 // Or, if you created algorithm_headers.h, just include that:
 // #include "algorithms/algorithm_headers.h"
@@ -26,6 +27,11 @@ int main() {
   // --- End Test Quick Sort ---
 
   // --- Add more algorithm tests below ---
+  std::cout << "\nTesting Binary Search:"
+            << "\n";
+  bool isPresent = binerySearch(quick_data, 7);
+  std::cout << "Element 7 is " << (isPresent ? "present" : "not present")
+            << " in the array." << std::endl;
 
   std::cout << "\n--- Testing Complete ---"
             << "/n";
